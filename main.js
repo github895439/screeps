@@ -122,3 +122,4 @@ function getIndex(max, prefix, creeps)
     
     return indexUsed;
 }
+
