@@ -18,12 +18,11 @@ module.exports.loop = function () {
     }
 
     var harvesters = _.filter(Game.creeps, (creep) => creep.memory.role == 'harvester');
-    console.log(existMinCreep(harvesters));
 
     if(harvesters.length < hvrMax) {
         var index = getIndex(hvrMax, "hvr", harvesters);
 
-        if (index == 1)
+        if (existMinCreep(harvesters))
         {
             var newName = Game.spawns['KEY'].createCreep([WORK,WORK,WORK,WORK,CARRY,MOVE,MOVE], "hvr" + index, {role: 'harvester'});
         }
@@ -31,7 +30,6 @@ module.exports.loop = function () {
         {
             var newName = Game.spawns['KEY'].createCreep([WORK,CARRY,MOVE], "hvr" + index, {role: 'harvester'});
         }
-//        console.log('Spawning new harvester: ' + newName);
     }
 
     var attackers = _.filter(Game.creeps, (creep) => creep.memory.role == 'attacker');
