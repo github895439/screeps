@@ -7,7 +7,7 @@ var roleUpgrader3 = require('role.upgrader3');
 var roleAttacker = require('role.attacker');
 var hvrMax = 2;
 var upMax = 3;
-var bdrMax = 0;
+var bdrMax = 5;
 
 module.exports.loop = function () {
     for(var name in Memory.creeps) {
