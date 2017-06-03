@@ -24,7 +24,7 @@ module.exports.loop = function () {
     }
 
     var harvesters = _.filter(Game.creeps, (creep) => creep.memory.role == 'harvester');
-//    console.log('Harvesters: ' + harvesters.length);
+    console.log(existMinCreep(harvesters));
 
     if(harvesters.length < hvrMax) {
         var index = getIndex(hvrMax, "hvr", harvesters);
@@ -131,4 +131,20 @@ function getIndex(max, prefix, creeps)
     for (indexUsed = 0; used[indexUsed]; indexUsed++){}
     
     return indexUsed;
+}
+
+function existMinCreep(creeps)
+{
+    var rtn = false;
+    var index;
+
+    for (index = 0; index < creeps.length; i++)
+    {
+        if (creeps[index].body.length == 3) {
+            rtn = true;
+            break;
+        }
+    }
+
+    return rtn;
 }
