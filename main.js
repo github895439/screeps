@@ -137,7 +137,7 @@ function existMinCreep(creeps)
     var rtn = false;
     var index;
 
-    for (index = 0; index < creeps.length; i++)
+    for (index = 0; index < creeps.length; index++)
     {
         if (creeps[index].body.length == 3) {
             rtn = true;
