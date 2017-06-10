@@ -25,6 +25,7 @@ module.exports.loop = function () {
         if (existMinCreep(harvesters))
         {
             var newName = Game.spawns['KEY'].createCreep([WORK,WORK,WORK,WORK,CARRY,MOVE,MOVE], "hvr" + index, {role: 'harvester'});
+            console.log(newName);
         }
         else
         {
