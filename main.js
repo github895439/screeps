@@ -54,7 +54,7 @@ module.exports.loop = function () {
     if(upgraders.length < upMax) {
         var index = getIndex(upMax, "up", upgraders);
         
-        if ((index >= 1) && (index <= 3))
+        if (existMinCreep(upgraders))
         {
             var newName = Game.spawns['KEY'].createCreep([WORK,WORK,WORK,WORK,CARRY,MOVE,MOVE], "up" + index, {role: 'upgrader'});
         }
