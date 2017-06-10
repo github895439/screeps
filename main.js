@@ -5,9 +5,9 @@ var roleUpgrader = require('role.upgrader');
 var roleUpgrader2 = require('role.upgrader2');
 var roleUpgrader3 = require('role.upgrader3');
 var roleAttacker = require('role.attacker');
-var hvrMax = 1;
+var hvrMax = 2;
 var upMax = 1;
-var bdrMax = 5;
+var bdrMax = 0;
 
 module.exports.loop = function () {
     for(var name in Memory.creeps) {
